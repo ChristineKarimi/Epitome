@@ -10,8 +10,20 @@ class Category(models.Model):
     def save_category(self):
         self.save()  
 
+    def delete_category(self):
+        Category.objects.filter(id = self.pk).delete()
+    
+    def update_category(self, **kwargs):
+        self.objects.filter(id = self.pk).update(**kwargs)    
+
 class Location(models.Model):
     name = models.CharField(max_length=20,) 
+    
+    def delete_category(self):
+        Category.objects.filter(id = self.pk).delete()
+    
+    def update_category(self, **kwargs):
+        self.objects.filter(id = self.pk).update(**kwargs)
 
 
 
