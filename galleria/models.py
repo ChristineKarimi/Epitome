@@ -10,6 +10,7 @@ class Location(models.Model):
 
 
 class Image(models.Model):
+    image = models.ImageField(upload_to = '', null = True, blank = True)
     name = models.CharField(max_length=20)
     description = models.CharField(max_length=50)
     category = models.ForeignKey('Category', on_delete = models.CASCADE, null='True', blank=True)
