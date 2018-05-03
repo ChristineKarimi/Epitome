@@ -54,3 +54,12 @@ class CategoryTestClass(TestCase):
         self.new_category.delete_category()
         categories = Category.objects.all()
         self.assertEqual(len(categories), 0)   
+
+    def test_update_category(self):
+        self.health = Category(name = 'Food')
+        self.health.save_category()
+        self.health = Category(name = 'Fashion')
+        self.health.save_category()
+        self.health.update_category(name = 'Nature')
+        categories = Category.objects.filter(name = 'People')
+        self.assertEqual(len(categories), 1)
