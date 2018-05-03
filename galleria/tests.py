@@ -71,12 +71,14 @@ class CategoryTestClass(TestCase):
 
 #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
 
-class Location(models.Model):
-    name = models.CharField(max_length=20, choices=LOCATIONS) 
+class LocationTestClass(TestCase):    
+    def setUp(self):
+        self.Kenya = Location(name = 'Kenya')
 
-    def __str__(self):
-        return self.name
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Kenya, Location))
 
-    def save_location(self):
-        self.save()    
-
+    def test_save_method(self):
+        self.Kenya.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
