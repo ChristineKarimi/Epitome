@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+    {% for pic in all_pics %}
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 columns">
+        <div class="scale">
+            <div class="opacity">
+                <div class="view">
+                    <a href="{% url 'single_pic' image_id=pic.id %}" class="btn-view">View Image</a>
+                </div>
+            </div>
+            <img src="{{pic.image.url}}" alt="Image" class="img-fluid">
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
