@@ -89,3 +89,12 @@ class LocationTestClass(TestCase):
         self.new_location.delete_location()
         locations = Location.objects.all()
         self.assertEqual(len(locations), 0)
+
+    def test_update_method(self):
+        self.Nairobi = Location(name = 'Nairobi')
+        self.Nairobi.save_location()
+        self.Nairobi = Location(name = 'Nai')
+        self.Nairobi.save_location()
+        self.Nairobi.update_location(name = 'Nai')
+        locations = Location.objects.filter(name = 'Nai')
+        self.assertEqual(len(locations), 1)   
