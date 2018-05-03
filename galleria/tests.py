@@ -3,6 +3,7 @@ from .models import Image, Category, Location
 
 # Create your tests here.
 class ImageTestClass(TestCase):
+
     def setUp(self):
         self.blackish = Image(name = 'blackish', description = 'blackish poster')
         self.blackish.save_image()
@@ -24,12 +25,25 @@ class ImageTestClass(TestCase):
         images = Image.objects.all()
         self.assertEqual(len(images), 1)
 
+
     def test_update_method(self):
         self.vic = Image(name = 'danvictor', description = 'an image of victor')
         self.vic.save_image()
-        self.vic = Image(name = 'danvictor', description = 'an image of victor')        
-        self.vic.update_image(name = 'danvictor')
+        self.vic = Image(name = 'danvic', description = 'an image of victor')        
+        self.vic.update_image(name = 'danvic')
         self.vic.save_image()
-        images = Image.objects.filter(name = 'danvictor')
+        images = Image.objects.filter(name = 'danvic')
         pics = Image.objects.all()      
         self.assertEqual(len(images), 1)
+
+class CategoryTestClass(TestCase):
+    def setUp(self):
+        self.Selfies = Category(name = 'selfies')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Selfies, Category))
+
+    def test_save_method(self):
+        self.Selfies.save_category()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories) > 0)        
