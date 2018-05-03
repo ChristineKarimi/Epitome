@@ -12,6 +12,14 @@ class ImageTestClass(TestCase):
 
 
     def test_save_method(self):
-        self.blackpanther.save_image()
+        self.blackish.save_image()
         images = Image.objects.all()
         self.assertTrue(len(images) > 0) 
+
+
+    def test_delete_method(self):
+        self.new_image = Image(name = 'flower', description = 'the beauty of a roseflower despite its thorns')  
+        self.new_image.save_image() 
+        self.new_image.delete_image()
+        images = Image.objects.all()
+        self.assertEqual(len(images), 1)
