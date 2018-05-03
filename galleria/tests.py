@@ -11,3 +11,7 @@ class ImageTestClass(TestCase):
         self.assertTrue(isinstance(self.blackish, Image))
 
 
+    def test_save_method(self):
+        self.blackpanther.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) > 0) 
