@@ -23,3 +23,13 @@ class ImageTestClass(TestCase):
         self.new_image.delete_image()
         images = Image.objects.all()
         self.assertEqual(len(images), 1)
+
+    def test_update_method(self):
+        self.vic = Image(name = 'danvictor', description = 'an image of victor')
+        self.vic.save_image()
+        self.vic = Image(name = 'danvictor', description = 'an image of victor')        
+        self.vic.update_image(name = 'danvictor')
+        self.vic.save_image()
+        images = Image.objects.filter(name = 'danvictor')
+        pics = Image.objects.all()      
+        self.assertEqual(len(images), 1)
