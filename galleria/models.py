@@ -1,6 +1,11 @@
 from django.db import models
 
 # Create your models here.
+CATEGORIES = (
+    ('Fashion', 'Fashion'),
+    ('Nature', 'Nature'),
+)
+
 class Category(models.Model):
     name = models.CharField(max_length=15,) 
 
@@ -8,13 +13,17 @@ class Category(models.Model):
         return self.name
 
     def save_category(self):
-        self.save()  
+        self.save()    
 
     def delete_category(self):
         Category.objects.filter(id = self.pk).delete()
     
     def update_category(self, **kwargs):
-        self.objects.filter(id = self.pk).update(**kwargs)    
+        self.objects.filter(id = self.pk).update(**kwargs)   
+
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
+
 
 class Location(models.Model):
     name = models.CharField(max_length=20,) 
@@ -25,6 +34,8 @@ class Location(models.Model):
     def update_category(self, **kwargs):
         self.objects.filter(id = self.pk).update(**kwargs)
 
+
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 class Image(models.Model):
