@@ -1,0 +1,36 @@
+{% load bootstrap4 %} {% load static %} {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galleria</title>
+
+    {% block styles %} {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/gallery.min.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    {% endblock %}
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <div class="container-fluid">
+        {% block content %} {% endblock %}
+    </div>
+
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    {% bootstrap_javascript %}
+    <script type="text/javascript" src="{% static 'js/gallery.js' %}"></script>
+    {% endblock %}
+
+</body>
+
+</html>
