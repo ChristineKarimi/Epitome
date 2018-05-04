@@ -43,7 +43,7 @@
                   <p><span class="txt-modal">Category:</span> {{image.category}}</p>
                   <p><span class="txt-modal">Location:</span> {{image.location}}</p>
                   <p><span class="txt-modal">Description:</span> {{image.description}}</p>
-                  <input type="text" value="https://legalleria.herokuapp.com/image/{{image.id}}" id="imageurl">
+                  
                 </div>
                 <div class="modal-footer"> 
                     <button class="bttn btn-success" id="copylink">Copy to clipboard</button>                 
@@ -51,7 +51,13 @@
               </div>
             </div>         
 
-       
+        {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        {% bootstrap_javascript %}
+        <script type="text/javascript" src="{% static 'js/single_pic.js' %}"></script>
+        {% endblock %}
+
 </body>
 
 </html>

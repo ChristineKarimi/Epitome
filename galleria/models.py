@@ -2,12 +2,15 @@ from django.db import models
 
 # Create your models here.
 CATEGORIES = (
-    ('Fashion', 'Fashion'),
-    ('Nature', 'Nature'),
+    ('Illustrations', 'Illustrations'),
+    ('Interior', 'Interior'),
+    ('Random', 'Random'),
+    ('Siberian', 'Siberian'),
+    ('Wakanda', 'Wakanda'),
 )
 
 class Category(models.Model):
-    name = models.CharField(max_length=15,) 
+    name = models.CharField(max_length=15, choices=CATEGORIES) 
 
     def __str__(self):
         return self.name
@@ -19,14 +22,18 @@ class Category(models.Model):
         Category.objects.filter(id = self.pk).delete()
     
     def update_category(self, **kwargs):
-        self.objects.filter(id = self.pk).update(**kwargs)   
+        self.objects.filter(id = self.pk).update(**kwargs)
 
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
-
+LOCATIONS = (
+    ('Poka Universe', 'Poka Universe'),
+    ('Singapore', 'Singapore'),
+    ('Nairobi, Kenya', 'Nairobi, Kenya'),
+    ('Siberia', 'Siberia'),
+    ('Wakanda', 'Wakanda'),
+)
 
 class Location(models.Model):
-    name = models.CharField(max_length=20,) 
+    name = models.CharField(max_length=20, choices=LOCATIONS) 
 
     def __str__(self):
         return self.name
@@ -38,14 +45,10 @@ class Location(models.Model):
         Location.objects.filter(id = self.pk).delete()
    
     def update_location(self, **kwargs):
-        self.objects.filter(id = self.pk).update(**kwargs) 
-
-
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+        self.objects.filter(id = self.pk).update(**kwargs)     
 
 class Image(models.Model):
-    image = models.ImageField(upload_to = '', null = True, blank = True)
+    image = models.ImageField(upload_to = 'pics/', null = True)
     name = models.CharField(max_length=20)
     description = models.CharField(max_length=50)
     category = models.ForeignKey('Category', on_delete = models.CASCADE, null='True', blank=True)

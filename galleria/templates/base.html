@@ -1,4 +1,4 @@
-{% load bootstrap4 %} {% load static %} {% load staticfiles %}
+{% load bootstrap4 %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +6,7 @@
     <meta charset="UTF-8" initial-scale="1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Galleria</title>
+    <title>Gallery</title>
 
     {% block styles %} {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/gallery.min.css' %}">
@@ -19,10 +19,9 @@
 <body>
 
     {% include 'navbar.html' %}
+    {% block content %} {% endblock %}
 
-    <div class="container-fluid">
-        {% block content %} {% endblock %}
-    </div>
+   
 
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

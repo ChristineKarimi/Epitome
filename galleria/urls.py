@@ -7,11 +7,11 @@ from django.conf.urls import url
 
 
 urlpatterns=[
-   url('', views.galleria, name = 'galleria'),
-   # url('search/', views.search_results, name = 'search_results'),
-   # url('categories/', views.display_images_categories, name = 'categories'),
-   # url('locations/', views.display_images_locations, name = 'locations'),
-  #  url('image/<int:image_id>', views.single_pic, name = 'single_pic')
+   url(r'^$', views.gallery, name = 'gallery'),
+    url(r'^search/', views.search_results, name = 'search_results'),
+    url(r'^categories/', views.display_images_categories, name = 'categories'),
+    url(r'^locations/', views.display_images_locations, name = 'locations'),
+    
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
