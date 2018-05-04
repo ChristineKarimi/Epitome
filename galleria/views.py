@@ -10,3 +10,9 @@ def display_images_categories(request):
     pics = Image.pic_categories()
 
     return render(request, 'categories.html', {"pics":pics}) 
+
+
+def display_images_locations(request):    
+    pics = Image.pic_locations()
+
+    return render(request, 'locations.html', {"pics":pics}) 
