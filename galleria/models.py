@@ -1,16 +1,9 @@
 from django.db import models
 
 # Create your models here.
-CATEGORIES = (
-    ('Illustrations', 'Illustrations'),
-    ('Interior', 'Interior'),
-    ('Random', 'Random'),
-    ('Siberian', 'Siberian'),
-    ('Wakanda', 'Wakanda'),
-)
 
 class Category(models.Model):
-    name = models.CharField(max_length=15, choices=CATEGORIES) 
+    name = models.CharField(max_length=15) 
 
     def __str__(self):
         return self.name
@@ -24,16 +17,9 @@ class Category(models.Model):
     def update_category(self, **kwargs):
         self.objects.filter(id = self.pk).update(**kwargs)
 
-LOCATIONS = (
-    ('Poka Universe', 'Poka Universe'),
-    ('Singapore', 'Singapore'),
-    ('Nairobi, Kenya', 'Nairobi, Kenya'),
-    ('Siberia', 'Siberia'),
-    ('Wakanda', 'Wakanda'),
-)
 
 class Location(models.Model):
-    name = models.CharField(max_length=20, choices=LOCATIONS) 
+    name = models.CharField(max_length=20) 
 
     def __str__(self):
         return self.name
