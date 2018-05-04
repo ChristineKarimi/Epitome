@@ -9,7 +9,9 @@
                     <a href="" class="btn-view">View Image</a>
                 </div>
             </div>
-            <img src="{{pic.image.url}}" alt="Image" class="img-fluid myimage">
+
+
+            <img src="{{pic.image.url}}" alt="{{pic.name}}" class="img-fluid myimage">
 
             <div id="myModal" class="modal">
 
@@ -17,11 +19,19 @@
                 <span class="close">&times;</span>
               
                 <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01">
+                <img src='' class="modal-content" id="modal-con">
               
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
               </div>
+
+
+
+
+
+
+
+              
         </div>
         <h1>{{pic.name}}</h1>
     </div>
