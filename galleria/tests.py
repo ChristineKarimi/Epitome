@@ -5,7 +5,7 @@ from .models import Image, Category, Location
 class ImageTestClass(TestCase):
 
     def setUp(self):
-        self.blackish = Image(name = 'blackish', description = 'blackish poster')
+        self.blackish = Image(name = 'blackish', description = 'blackish character')
         self.blackish.save_image()
 
     def test_instance(self):
