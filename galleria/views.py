@@ -22,12 +22,12 @@ def search_results(request):
 def display_images_categories(request):    
     pics = Image.pic_categories()
 
-    return render(request, 'categories.html', {"pics":pics}) 
+    return render(request, 'category.html', {"pics":pics}) 
 
 def display_images_locations(request):    
     pics = Image.pic_locations()
 
-    return render(request, 'locations.html', {"pics":pics}) 
+    return render(request, 'location.html', {"pics":pics}) 
 
 def single_pic(request):
     image = Image.get_pic(image_id)
