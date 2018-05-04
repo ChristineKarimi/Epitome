@@ -16,3 +16,7 @@ def display_images_locations(request):
     pics = Image.pic_locations()
 
     return render(request, 'locations.html', {"pics":pics}) 
+
+def single_pic(request, image_id):
+    image = Image.get_pic(image_id)
+    return render(request, 'single_pic.html', {"image":image})
