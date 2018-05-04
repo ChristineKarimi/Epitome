@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <!-- custom designed navbar -->
+
+    <nav>
+        <div class="menu-icon">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+        <p class='logo'>Galleria</p>
+        <div class="menu">
+            <ul class='hidden'>
+                <li class="home">
+                    <a href="{% url 'gallery' %}">Home</a>
+                </li>
+                <li class="category">
+                    <a href="{% url 'categories' %}">Category</a>
+                </li>
+                <li class="location">
+                    <a href="{% url 'locations' %}">Location</a>
+                </li>                
+            </ul>
+            <form class="form-inline search" role="search" action="{% url 'search_results' %}">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" name='image'>
+                    <button class="btn" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+        </div>
+
+    </nav>
+
+    <!-- end of navbar -->
+
+</body>
+
+</html>
