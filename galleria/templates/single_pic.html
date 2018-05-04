@@ -1,0 +1,57 @@
+{% load bootstrap4 %} {% load static %} {% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image</title>
+
+    {% block styles %} {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/single_pic.min.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    {% endblock %}
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+        <div class="scale">
+            <div class="opacity">
+                <div class="view">
+                    <a href="#myModal" class="btn-view" data-toggle="modal">Details</a>
+                </div>
+            </div>
+            <img src="{{image.image.url}}" alt="Image" class="img-fluid">
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: rgba(30, 144, 255, 0.6);">
+                  <h5 class="modal-title" id="exampleModalLabel" style="color: rgba(0, 0, 0, 0.7);">Image Properties</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">                  
+                  <p><span class="txt-modal">Image name:</span> {{image.name}}</p>
+                  <p><span class="txt-modal">Category:</span> {{image.category}}</p>
+                  <p><span class="txt-modal">Location:</span> {{image.location}}</p>
+                  <p><span class="txt-modal">Description:</span> {{image.description}}</p>
+                  <input type="text" value="https://legalleria.herokuapp.com/image/{{image.id}}" id="imageurl">
+                </div>
+                <div class="modal-footer"> 
+                    <button class="bttn btn-success" id="copylink">Copy to clipboard</button>                 
+                </div>
+              </div>
+            </div>         
+
+       
+</body>
+
+</html>
