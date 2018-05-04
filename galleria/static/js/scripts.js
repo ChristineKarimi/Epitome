@@ -8,7 +8,7 @@ $(document).ready(function(){
 // var captionText = 
 $('.myimage').click(function(){
     $('#myModal').css('display', "block")
-    $("#modal-con").attr('src') = $(this).attr('src')
+    $("#modal-con").attr('src',$(this).attr('src'))
     $('#caption').html()= $(this).attr('alt')
 })
 
