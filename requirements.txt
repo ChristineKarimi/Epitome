@@ -4,7 +4,7 @@ Django==1.11
 
 django-admin==1.2.4
 
-django-bootstrap3==10.0.1
+django-bootstrap4
 
 django-excel-response2==2.0.8
 
