@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">     
+    {% for image in pics %}     
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 columns"> 
+        <div class="scale">
+            <div class="opacity">
+                <div class="view">
+                    <a href="" class="btn-view">Image</a>
+                </div>
+            </div>
+            <img src="{{image.image.url}}" alt="Image" class="img-fluid">  
+            <!-- <h6 class="text-center" style="margin-top: 0.5vw;">{{image.location.name}}</h6>           
+        </div> -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+          
+            <!-- Modal Content (The Image) -->
+            <img src='' class="modal-content" id="modal-con">
+          
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+          </div>
+    
+            <div class="container">
+            
+            <button class="btn">View Details</button>
+        
+          </div> 
+    
+      </div>
+    
+    </div>
+        {% endfor %}
+    </div>
+    
+    {% endblock %}
+    </div>
+    
+ 

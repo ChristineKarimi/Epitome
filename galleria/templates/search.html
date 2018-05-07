@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+    {% for image in images %} {% if images %}
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 columns">
+        <div class="scale">
+            <div class="opacity">
+                <div class="view">
+                    <a href="" class="btn-view">View Image</a>
+                </div>
+            </div>
+            <img src="{{image.image.url}}" alt="Image" class="img-fluid">
+        </div>
+    </div>
+    {% endif %} {% endfor %}
+</div>
+
+{% endblock %}

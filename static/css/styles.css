@@ -1,0 +1,107 @@
+.myimage {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myimage:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+#myModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9);       
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+ .container {
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  .container img {
+    width: 50%;
+    height: auto;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(71, 4, 51);
+    color: white;
+    font-size: 16px;
+    padding: 4px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .container .btn:hover {
+    background-color: rgb(153, 9, 129);
+  } 
+.one{width:40px}.btn-view,nav ul{text-align:center}.logo,nav ul li{display:inline-block}.two{width:26px}.three{width:32px}.logo{margin:12px 36px;cursor:pointer;font:400 2.5vw 'Lobster Two',Helvetica,sans-serif;color:rgba(158, 7, 113, 0.885);text-shadow:1px 1px 0 #ededed,4px 4px 0 rgba(0,0,0,.15)}nav{position:unset;display:block;height:26%;width:100%;background:url(/static/images/4.jpg) no-repeat;background-size:100%}nav ul{margin:-5.2vw 0 0;padding-left:0;z-index:1}nav ul li{list-style:none;padding:2vw 1vw 10.5vw}nav ul li:hover{background-color:rgba(255,255,255,.3)}nav ul li a{text-decoration:none;font-size:1.5vw;color:rgba(129, 6, 82, 0.939)}nav ul li:hover a{color:rgb(158, 7, 113, 0.885);text-decoration:none}nav .search{position:absolute;z-index:1;top:1.6vw;left:93.2vw;transform:translate(-10vw)}.form-inline .form-control{display:inline-block;width:10vw;height:2.5vw;vertical-align:middle;border-top-right-radius:0;border-bottom-right-radius:0;background:rgba(255,255,255,.2);border:2px solid rgba(158, 7, 113, 0.885)}.form-inline .form-control:focus{background:#fff;color:rgb(158, 7, 113, 0.885)}.form-control::placeholder{color:white;font-size:1.1vw}.form-inline{margin-right:-10%;width:15vw;height:2.5vw}.fa-search{position:absolute;top:.7vw;left:10.6vw;font-size:1.2vw;color:white}.border-color:rgba(60,179,113,.5)}}@media(max-width:768px){nav,nav ul,nav ul li{background:linear-gradient(90deg,#f0027f,#75489f)}.menu-icon{display:block}.logo{top:0;margin-left:2vw;font:400 2em 'Lobster Two',Helvetica,sans-serif;color:rgb(148, 9, 141);text-shadow:1px 1px 0 purple,4px 4px 0 rgba(0,0,0,.15)}nav{height:12%}nav ul{margin:0;position:relative;z-index:2;max-height:10px}.hidden{display:none}ul.hidden{padding-left:0}nav ul li{box-sizing:border-box;width:100%;padding:0 0 2em;text-align:center;color:white}nav ul li.home{padding-top:.5em}nav ul li a{text-decoration:none;font-size:20px;color:rgb(97, 5, 97)}.container-fluid{padding:1.5% 3% 0}.columns{padding:0 .5vw 1vw;width:33.333%;margin:0}.row{margin:0 .05%}nav .search{position:absolute;top:20.8px;width:21vw;left:50vw;transform:translate(-10vw)}.btn,.form-inline .form-control{top:0;background:rgba(255,255,255,.3);height:4vw;position:absolute}.form-inline .form-control{font-size:16px;display:inline-block;width:15vw;vertical-align:middle;border-top-right-radius:0;border-bottom-right-radius:0;border:none}.form-inline .form-control:focus{background:rgba(255,255,255,.3);color:rgba(255,255,255,.8)}.form-control::placeholder{font-size:0}.fa-search{position:absolute;top:1.2vw;left:1.2vw;transform:translate(-10%,-5%);font-size:9px;color:purple}.btn:focus{background:rgba(60,179,113,.5);border-color:rgba(60,179,113,.5)}.scale{box-shadow:initial}}@media(max-width:420px){.btn,.form-inline .form-control{height:5vw}nav .search{top:20.8px}.form-inline .form-control:focus{font-size:10px}.fa-search{top:1.3vw;left:1.8vw}}
