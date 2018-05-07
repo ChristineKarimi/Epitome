@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
+
 <div class="row">
     {% for pic in all_pics %}
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 columns">
@@ -12,6 +13,7 @@
 
 
             <img src="{{pic.image.url}}" alt="{{pic.name}}" class="img-fluid myimage">
+            
 
             <div id="myModal" class="modal">
 
@@ -24,10 +26,11 @@
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
               </div>
-             
+            
 
                 <div class="container">
-                
+                    
+                       
                     <button
 
                     id='details'
@@ -61,15 +64,15 @@
           
                         <label>DESCRIPTION:</label>
           
-                        <li class="one"></li>
+                        <li class="oneone"></li>
           
                         <label>LOCATION:</label>
           
-                        <li class="two"></li>
+                        <li class="twotwo"></li>
           
                         <label>CATEGORY:</label>
           
-                        <li class="three"></li>
+                        <li class="threethree"></li>
           
                         
           
