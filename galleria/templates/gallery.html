@@ -24,11 +24,61 @@
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
               </div>
+             
 
                 <div class="container">
                 
-                <button class="btn">View Details</button>
-      
+                    <button
+
+                    id='details'
+        
+                    data-description='{{pic.description}}'
+        
+                    data-location='{{pic.location}}'
+        
+                    data-category='{{pic.category}}'
+        
+                    
+        
+                    type="button"
+        
+                    class="btn btn-info btn-xs info-btn"
+        
+                    data-toggle="modal">
+                                 View Details
+        
+                  </button>
+
+                  <div id="modal-details" class="modal">
+
+                    <span class="close">&times;</span>
+          
+                    <div class="modal-content">
+          
+                    <!-- <blockquote id="caption-d"> -->
+          
+                      <ul>
+          
+                        <label>DESCRIPTION:</label>
+          
+                        <li class="one"></li>
+          
+                        <label>LOCATION:</label>
+          
+                        <li class="two"></li>
+          
+                        <label>CATEGORY:</label>
+          
+                        <li class="three"></li>
+          
+                        
+          
+                      </ul>
+          
+                    <!-- </blockquote> -->
+                    </div>
+          
+                  </div>
             
               </div> 
 

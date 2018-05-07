@@ -12,6 +12,25 @@ $('.myimage').click(function(){
     $('#caption').html()= $(this).attr('alt')
 })
 
+$('button#details').click(function() {
+
+  $('#modal-details').css('display', 'block')
+
+  img_d = $(this).data("description");
+
+  loc_d = $(this).data("location");
+
+  cat_d = $(this).data("category");
+
+
+  $(".one").text(img_d);
+
+  $(".two").text(loc_d);
+
+  $(".three").text(cat_d);
+
+
+})
 // Get the <span> element that closes the modal
 // var span = ;
 
@@ -19,6 +38,7 @@ $('.myimage').click(function(){
 $(".close").click(function() {
 //   modal.style.display = "none";
   $('#myModal').css('display', "none");
+  $('#modal-details').css('display', 'none')
 })
 })
 
