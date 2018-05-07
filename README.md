@@ -17,8 +17,6 @@
 
 > - Users can view a single pic in its fullscreen size.
 
-> --------------------------------------------------------------------------------
-
 
 > - Users can also view the details of the image and even copy the link of the image url.
 
