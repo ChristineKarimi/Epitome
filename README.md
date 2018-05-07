@@ -6,8 +6,6 @@
 
 > THE EPITOME
 
-![Pitchez Web App](/static/imgs/home.png)
-
 > --------------------------------------------------------------------------------
 
 ## Description
@@ -15,23 +13,10 @@
 > Epitome is a personal gallery application built on django where I display my photos for others to see.
 
 ## Specifications
-> - It has an administration dashboard that allows the admin to post new pics, edit them and delete existing pics.
+> -Has an administration dashboard that allows the admin to post new pics, edit them and delete existing pics.
 
-> --------------------------------------------------------------------------------
-
-![Pitchez Web App](/static/imgs/admin.png)
-
-
-> --------------------------------------------------------------------------------
 
 > - Users are able to search for pics according to categories.
-
-> --------------------------------------------------------------------------------
-
-
-![Pitchez Web App](/static/imgs/search.png)
-
-> --------------------------------------------------------------------------------
 
 
 > - Users can view a single pic in its fullscreen size.
@@ -39,18 +24,7 @@
 > --------------------------------------------------------------------------------
 
 
-![Pitchez Web App](/static/imgs/single.png)
-
-> --------------------------------------------------------------------------------
-
 > - Users can also view the details of the image and even copy the link of the image url.
-
-> --------------------------------------------------------------------------------
-
-
-![Pitchez Web App](/static/imgs/details.png)
-
-> --------------------------------------------------------------------------------
 
 ## Setup/Installation Requirements
 
