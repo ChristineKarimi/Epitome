@@ -1,5 +1,43 @@
 $(document).ready(function(){
 
+  $('.category-button').click(function(event) {
+    event.preventDefault()
+    var btn_value = $(this).text()
+
+    $.ajax({
+      'url': 'category/',
+      'type': 'GET',
+      'data': {
+        category_name: btn_value
+      },
+      'success': function(resp) {
+        $('.container-fluid').empty()
+        $('.container-fluid').html(resp)
+      },
+
+    })
+  })
+  
+  $('option').click(function() {
+    if ($(this).is(':selected')) {
+      option_value = $(this).text()
+      $.ajax({
+        'url': 'location/',
+        'type': 'GET',
+        'data': {
+          location_name: option_value
+        },
+        'success': function(resp) {
+          $('.container-fluid').empty()
+          $('.container-fluid').html(resp)
+        },
+
+      })
+    }
+
+  })
+
+
 $('.myimage').click(function(){
     $('#myModal').css('display', "block")
     $("#modal-con").attr('src',$(this).attr('src'))
@@ -31,4 +69,3 @@ $(".close").click(function() {
   $('#modal-details').css('display', 'none')
 })
 })
-
