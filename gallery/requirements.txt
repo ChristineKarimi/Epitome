@@ -24,7 +24,7 @@ python-systemd==231
 pytz==2018.4
 pyxdg==0.25
 query-string==1.0.0
-reportlab==3.3.0
+reportlab==3.5.55
 request==1.0.0
 requests==2.9.1
 sessioninstaller==0.0.0
